@@ -1,16 +1,9 @@
 class Binary_Search_Tree:
-  # TODO.I have provided the public method skeletons. You will need
-  # to add private methods to support the recursive algorithms
-  # discussed in class
 
   class __BST_Node:
-    # TODO The Node class is private. You may add any attributes and
-    # methods you need. Recall that attributes in an inner class 
-    # must be public to be reachable from the the methods.
 
     def __init__(self, value):
       self.value = value
-      # TODO complete Node initialization
       self.left = None
       self.right = None
       self.height = 1
@@ -31,7 +24,6 @@ class Binary_Search_Tree:
 
   def __init__(self):
     self.__root = None
-    # TODO complete initialization
   
   def __find_balance(self, root):
     hleft = 0
@@ -96,9 +88,7 @@ class Binary_Search_Tree:
     # Insert the value specified into the tree at the correct
     # location based on "less is left; greater is right" binary
     # search tree ordering. If the value is already contained in
-    # the tree, raise a ValueError. Your solution must be recursive.
-    # This will involve the introduction of additional private
-    # methods to support the recursion control variable.
+    # the tree, raise a ValueError.
     self.__root = self.__recursive_insert(self.__root, value)
 
   def __find_min(self, root):
@@ -135,11 +125,7 @@ class Binary_Search_Tree:
     # if the value isn't found. When a replacement value is necessary,
     # select the minimum value to the from the right as this element's
     # replacement. Take note of when to move a node reference and when
-    # to replace the value in a node instead. It is not necessary to
-    # return the value (though it would reasonable to do so in some 
-    # implementations). Your solution must be recursive. 
-    # This will involve the introduction of additional private
-    # methods to support the recursion control variable.
+    # to replace the value in a node instead.
     self.__root = self.__recursive_remove(self.__root, value)
     if self.__root != None:
       self.__root = self.__balance(self.__root)
@@ -198,36 +184,27 @@ class Binary_Search_Tree:
     # Construct and return a string representing the in-order
     # traversal of the tree. Empty trees should be printed as [ ].
     # Trees with one value should be printed as [ 4 ]. Trees with more
-    # than one value should be printed as [ 4, 7 ]. Note the spacing.
-    # Your solution must be recursive. This will involve the introduction
-    # of additional private methods to support the recursion control 
-    # variable.
+    # than one value should be printed as [ 4, 7 ].
     return self.__order_output(self.__in_order_traversal)
 
   def pre_order(self):
     # Construct and return a string representing the pre-order
     # traversal of the tree. Empty trees should be printed as [ ].
     # Trees with one value should be printed in as [ 4 ]. Trees with
-    # more than one value should be printed as [ 4, 7 ]. Note the spacing.
-    # Your solution must be recursive. This will involve the introduction
-    # of additional private methods to support the recursion control 
-    # variable.
+    # more than one value should be printed as [ 4, 7 ].
     return self.__order_output(self.__pre_order_traversal)
 
   def post_order(self):
     # Construct an return a string representing the post-order
     # traversal of the tree. Empty trees should be printed as [ ].
     # Trees with one value should be printed in as [ 4 ]. Trees with
-    # more than one value should be printed as [ 4, 7 ]. Note the spacing.
-    # Your solution must be recursive. This will involve the introduction
-    # of additional private methods to support the recursion control 
-    # variable.
+    # more than one value should be printed as [ 4, 7 ].
     return self.__order_output(self.__post_order_traversal)
     
   def get_height(self):
-    # return an integer that represents the height of the tree.
-    # assume that an empty tree has height 0 and a tree with one
-    # node has height 1. This method must operate in constant time.
+    # Return an integer that represents the height of the tree.
+    # Assume that an empty tree has height 0 and a tree with one
+    # node has height 1.
     if self.__root == None: return 0 # If tree is empty
     else: return self.__root.height # If tree not empty
 
@@ -235,6 +212,5 @@ class Binary_Search_Tree:
     return self.in_order()
 
 if __name__ == '__main__':
-  tree = Binary_Search_Tree()
-  pass #unit tests make the main section unnecessary.
+  pass
 
