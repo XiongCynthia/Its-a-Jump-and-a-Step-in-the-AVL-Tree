@@ -1,6 +1,6 @@
 # It's a Jump and a Step in the AVL Tree
 
-Binary_Search_Tree.py is an implementation of a self-balancing binary search tree, an AVL tree, that can store and process any object that uses the built-in comparison methods, as well as return the in-fix, pre-fix, and post-fix expression of the tree. 
+[Binary_Search_Tree.py](https://github.com/XiongCynthia/Its-a-Jump-and-a-Step-in-the-AVL-Tree/blob/main/Binary_Search_Tree.py) is an implementation of a self-balancing binary search tree, an AVL tree, that can store and process any object that uses the built-in comparison methods, as well as return the in-fix, pre-fix, and post-fix expression of the tree. 
 
 ---
 
